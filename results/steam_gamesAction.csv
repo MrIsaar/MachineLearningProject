@@ -1,0 +1,100 @@
+appid,name,release_date,english,developer,publisher,platforms,required_age,categories,genres,steamspy_tags,achievements,positive_ratings,negative_ratings,average_playtime,median_playtime,owners,price
+10,Counter-Strike,2000-11-01,1,Valve,Valve,windows;mac;linux,0,Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled,Action,Action;FPS;Multiplayer,0,124534,3339,17612,317,10000000-20000000,7.19
+20,Team Fortress Classic,1999-04-01,1,Valve,Valve,windows;mac;linux,0,Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled,Action,Action;FPS;Multiplayer,0,3318,633,277,62,5000000-10000000,3.99
+30,Day of Defeat,2003-05-01,1,Valve,Valve,windows;mac;linux,0,Multi-player;Valve Anti-Cheat enabled,Action,FPS;World War II;Multiplayer,0,3416,398,187,34,5000000-10000000,3.99
+40,Deathmatch Classic,2001-06-01,1,Valve,Valve,windows;mac;linux,0,Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled,Action,Action;FPS;Multiplayer,0,1273,267,258,184,5000000-10000000,3.99
+50,Half-Life: Opposing Force,1999-11-01,1,Gearbox Software,Valve,windows;mac;linux,0,Single-player;Multi-player;Valve Anti-Cheat enabled,Action,FPS;Action;Sci-fi,0,5250,288,624,415,5000000-10000000,3.99
+60,Ricochet,2000-11-01,1,Valve,Valve,windows;mac;linux,0,Multi-player;Online Multi-Player;Valve Anti-Cheat enabled,Action,Action;FPS;Multiplayer,0,2758,684,175,10,5000000-10000000,3.99
+70,Half-Life,1998-11-08,1,Valve,Valve,windows;mac;linux,0,Single-player;Multi-player;Online Multi-Player;Steam Cloud;Valve Anti-Cheat enabled,Action,FPS;Classic;Action,0,27755,1100,1300,83,5000000-10000000,7.19
+80,Counter-Strike: Condition Zero,2004-03-01,1,Valve,Valve,windows;mac;linux,0,Single-player;Multi-player;Valve Anti-Cheat enabled,Action,Action;FPS;Multiplayer,0,12120,1439,427,43,10000000-20000000,7.19
+130,Half-Life: Blue Shift,2001-06-01,1,Gearbox Software,Valve,windows;mac;linux,0,Single-player,Action,FPS;Action;Sci-fi,0,3822,420,361,205,5000000-10000000,3.99
+220,Half-Life 2,2004-11-16,1,Valve,Valve,windows;mac;linux,0,Single-player;Steam Achievements;Steam Trading Cards;Captions available;Partial Controller Support;Steam Cloud;Includes Source SDK,Action,FPS;Action;Sci-fi,33,67902,2419,691,402,10000000-20000000,7.19
+240,Counter-Strike: Source,2004-11-01,1,Valve,Valve,windows;mac;linux,0,Multi-player;Cross-Platform Multiplayer;Steam Achievements;Steam Cloud;Valve Anti-Cheat enabled;Stats;Includes Source SDK,Action,Action;FPS;Multiplayer,147,76640,3497,6842,400,10000000-20000000,7.19
+280,Half-Life: Source,2004-06-01,1,Valve,Valve,windows;mac;linux,0,Single-player,Action,FPS;Action;Sci-fi,0,3767,1053,190,214,2000000-5000000,0.0
+300,Day of Defeat: Source,2010-07-12,1,Valve,Valve,windows;mac;linux,0,Multi-player;Cross-Platform Multiplayer;Steam Achievements;Steam Trading Cards;Valve Anti-Cheat enabled;Stats;Includes Source SDK,Action,FPS;World War II;Multiplayer,54,10489,1210,1356,134,5000000-10000000,7.19
+320,Half-Life 2: Deathmatch,2004-11-01,1,Valve,Valve,windows;mac;linux,0,Multi-player;Valve Anti-Cheat enabled;Includes Source SDK,Action,Action;FPS;Multiplayer,0,6020,787,311,32,10000000-20000000,3.99
+340,Half-Life 2: Lost Coast,2005-10-27,1,Valve,Valve,windows;mac;linux,0,Single-player;Commentary available,Action,FPS;Action;Singleplayer,0,5783,1020,46,29,10000000-20000000,0.0
+360,Half-Life Deathmatch: Source,2006-05-01,1,Valve,Valve,windows;mac;linux,0,Multi-player;Valve Anti-Cheat enabled,Action,Action;FPS;Multiplayer,0,1362,473,102,81,5000000-10000000,0.0
+380,Half-Life 2: Episode One,2006-06-01,1,Valve,Valve,windows;mac;linux,0,Single-player;Steam Achievements;Captions available;Partial Controller Support;Steam Cloud;Stats;Includes Source SDK;Commentary available,Action,FPS;Action;Sci-fi,13,7908,517,281,184,5000000-10000000,5.79
+400,Portal,2007-10-10,1,Valve,Valve,windows;mac;linux,0,Single-player;Steam Achievements;Captions available;Partial Controller Support;Includes level editor;Includes Source SDK;Commentary available,Action,Puzzle;First-Person;Singleplayer,15,51801,1080,288,137,10000000-20000000,7.19
+420,Half-Life 2: Episode Two,2007-10-10,1,Valve,Valve,windows;mac;linux,0,Single-player;Steam Achievements;Captions available;Partial Controller Support;Steam Cloud;Stats;Includes Source SDK;Commentary available,Action,FPS;Action;Sci-fi,22,13902,696,354,301,5000000-10000000,5.79
+440,Team Fortress 2,2007-10-10,1,Valve,Valve,windows;mac;linux,0,Multi-player;Cross-Platform Multiplayer;Steam Achievements;Steam Trading Cards;Captions available;Steam Workshop;In-App Purchases;Partial Controller Support;Valve Anti-Cheat enabled;Stats;Includes level editor;Commentary available,Action;Free to Play,Free to Play;Multiplayer;FPS,520,515879,34036,8495,623,20000000-50000000,0.0
+500,Left 4 Dead,2008-11-17,1,Valve,Valve,windows;mac,0,Single-player;Multi-player;Co-op;Steam Achievements;Full controller support;Captions available;Steam Cloud;Valve Anti-Cheat enabled;Stats;Steam Leaderboards;Includes Source SDK;Commentary available,Action,Zombies;Co-op;FPS,73,17951,948,897,278,5000000-10000000,7.19
+550,Left 4 Dead 2,2009-11-19,1,Valve,Valve,windows;mac;linux,0,Single-player;Multi-player;Co-op;Steam Achievements;Full controller support;Steam Trading Cards;Captions available;Steam Workshop;Steam Cloud;Valve Anti-Cheat enabled;Stats;Includes Source SDK;Commentary available,Action,Zombies;Co-op;FPS,70,251789,8418,1615,566,10000000-20000000,7.19
+570,Dota 2,2013-07-09,1,Valve,Valve,windows;mac;linux,0,Multi-player;Co-op;Steam Trading Cards;Steam Workshop;SteamVR Collectibles;In-App Purchases;Valve Anti-Cheat enabled,Action;Free to Play;Strategy,Free to Play;MOBA;Strategy,0,863507,142079,23944,801,100000000-200000000,0.0
+620,Portal 2,2011-04-18,1,Valve,Valve,windows;mac;linux,0,Single-player;Co-op;Steam Achievements;Full controller support;Steam Trading Cards;Captions available;Steam Workshop;Steam Cloud;Stats;Includes level editor;Commentary available,Action;Adventure,Puzzle;Co-op;First-Person,51,138220,1891,1102,520,10000000-20000000,7.19
+630,Alien Swarm,2010-07-19,1,Valve,Valve,windows,0,Single-player;Multi-player;Co-op;Steam Achievements;Captions available;Steam Cloud;Stats;Includes level editor,Action,Free to Play;Co-op;Action,66,17435,941,371,83,2000000-5000000,0.0
+730,Counter-Strike: Global Offensive,2012-08-21,1,Valve;Hidden Path Entertainment,Valve,windows;mac;linux,0,Multi-player;Steam Achievements;Full controller support;Steam Trading Cards;Steam Workshop;In-App Purchases;Valve Anti-Cheat enabled;Stats,Action;Free to Play,FPS;Multiplayer;Shooter,167,2644404,402313,22494,6502,50000000-100000000,0.0
+1002,Rag Doll Kung Fu,2005-10-12,1,Mark Healey,Mark Healey,windows,0,Single-player;Multi-player,Indie,Indie;Fighting;Multiplayer,0,40,17,0,0,20000-50000,5.99
+1200,Red Orchestra: Ostfront 41-45,2006-03-14,1,Tripwire Interactive,Tripwire Interactive,windows;mac;linux,0,Multi-player;Steam Achievements;Valve Anti-Cheat enabled,Action,World War II;Action;FPS,44,1562,223,232,258,500000-1000000,3.99
+1250,Killing Floor,2009-05-14,1,Tripwire Interactive,Tripwire Interactive,windows;mac;linux,0,Single-player;Multi-player;Co-op;Cross-Platform Multiplayer;Steam Achievements;Steam Trading Cards;Steam Workshop;Valve Anti-Cheat enabled;Stats;Includes level editor,Action,FPS;Zombies;Co-op,285,53710,2649,1328,306,2000000-5000000,14.99
+1300,SiN Episodes: Emergence,2006-05-10,1,Ritual Entertainment,Ritual Entertainment,windows,0,Single-player;Stats,Action,Action;FPS;Cyberpunk,0,468,61,0,0,100000-200000,7.19
+1500,Darwinia,2005-07-14,1,Introversion Software,Introversion Software,windows;mac;linux,0,Single-player,Indie;Strategy,Strategy;Indie;RTS,0,472,158,182,273,500000-1000000,7.19
+1510,Uplink,2006-08-23,1,Introversion Software,Introversion Software,windows;mac;linux,0,Single-player,Indie;Strategy,Hacking;Indie;Strategy,0,1602,152,65,77,500000-1000000,6.99
+1520,DEFCON,2006-09-29,1,Introversion Software,Introversion Software,windows;mac;linux,0,Single-player;Multi-player,Indie;Strategy,Strategy;Indie;Multiplayer,22,2057,344,80,119,500000-1000000,7.19
+1530,Multiwinia,2008-09-19,1,Introversion Software,Introversion Software,windows;mac,0,Single-player;Multi-player;Steam Achievements,Indie,Indie;RTS;Strategy,12,368,75,121,224,500000-1000000,7.19
+1600,Dangerous Waters,2006-02-07,1,Sonalysts,Strategy First,windows,0,Single-player;Multi-player,Strategy,Strategy;Simulation;Naval,0,140,44,0,0,50000-100000,22.99
+1610,Space Empires IV Deluxe,2006-02-07,1,Malfador Machinations,Strategy First,windows,0,Single-player;Multi-player,Strategy,Strategy;4X;Sci-fi,0,112,26,0,0,50000-100000,6.99
+1630,Disciples II: Rise of the Elves ,2006-07-06,1,Strategy First,Strategy First,windows,0,Single-player;Multi-player;Co-op,Strategy,Strategy;Turn-Based Strategy;Fantasy,0,451,108,0,0,100000-200000,4.99
+1640,Disciples II: Gallean's Return,2006-07-06,1,Strategy First,Strategy First,windows,0,Single-player;Multi-player;Co-op,Strategy,Turn-Based Strategy;Strategy;Classic,0,490,152,9,12,100000-200000,4.99
+1670,Iron Warriors: T - 72 Tank Command ,2006-07-26,1,Strategy First,Strategy First,windows,0,Single-player;Multi-player,Strategy,Simulation;Strategy;Tanks,0,137,102,0,0,20000-50000,3.99
+1690,Space Empires V,2006-10-16,1,Malfador Machinations,Strategy First,windows,0,Single-player;Multi-player,Strategy,Strategy;4X;Space,0,191,85,35,35,50000-100000,10.99
+1700,Arx Fatalis,2007-04-03,1,Arkane Studios,Arkane Studios,windows,0,Single-player,RPG,RPG;First-Person;Classic,0,671,106,11,21,100000-200000,2.99
+1840,Source Filmmaker,2012-07-10,1,Valve,Valve,windows,0,Steam Workshop,Animation & Modeling;Video Production,Animation & Modeling;Video Production;Free to Play,0,15083,1111,239,77,1000000-2000000,0.0
+1900,Earth 2160,2006-04-01,1,Reality Pump Studios,Topware Interactive;ACE,windows;mac;linux,0,Single-player;Multi-player;Co-op;Cross-Platform Multiplayer;Steam Trading Cards,Strategy,Strategy;RTS;Sci-fi,0,498,238,405,414,1000000-2000000,3.99
+1930,Two Worlds Epic Edition,2009-04-30,1,Reality Pump Studios,Topware Interactive,windows;mac;linux,0,Single-player;Multi-player;Online Multi-Player;Online Co-op;Cross-Platform Multiplayer;Steam Trading Cards;Partial Controller Support,RPG,RPG;Open World;Fantasy,0,2656,1055,484,422,1000000-2000000,6.99
+2100,Dark Messiah of Might & Magic,2006-10-25,1,Arkane Studios,Ubisoft,windows,0,Single-player;Multi-player;Valve Anti-Cheat enabled,Action;RPG,RPG;Action;First-Person,0,4386,316,634,700,1000000-2000000,4.29
+2200,Quake III Arena,2007-08-03,1,id Software,id Software,windows,0,Single-player;Multi-player;Steam Cloud,Action,FPS;Action;Classic,0,1362,66,123,103,200000-500000,12.99
+2210,Quake IV,2011-08-04,1,RavenSoft / id Software,Bethesda Softworks,windows,18,Single-player;Multi-player;Steam Cloud,Action,FPS;Action;Shooter,0,891,171,36,32,200000-500000,12.99
+2270,Wolfenstein 3D,2007-08-03,1,id Software,Bethesda-Softworks,windows,0,Single-player;Steam Cloud,Action,FPS;Classic;Action,0,1773,87,69,110,200000-500000,2.99
+2280,Ultimate Doom,2007-08-03,1,id Software,id Software,windows,0,Single-player;Steam Cloud,Action,Classic;FPS;Action,0,3705,257,125,179,500000-1000000,3.99
+2290,Final DOOM,2007-08-03,1,id Software,id Software,windows,0,Single-player;Steam Cloud,Action,FPS;Action;Classic,0,573,82,120,114,200000-500000,3.99
+2300,DOOM II,2007-08-03,1,id Software,id Software,windows,0,Single-player;Multi-player;Steam Cloud,Action,Classic;FPS;Action,0,2517,182,90,78,500000-1000000,3.99
+2310,QUAKE,2007-08-03,1,id Software,id Software,windows,0,Single-player;Multi-player;Co-op;Steam Cloud,Action,FPS;Classic;Action,0,2618,136,167,189,200000-500000,3.99
+2320,QUAKE II,2007-08-03,1,id Software,id Software,windows,0,Single-player;Multi-player;Co-op;Steam Cloud,Action,FPS;Action;Classic,0,1369,107,291,349,200000-500000,3.99
+2330,QUAKE II Mission Pack: The Reckoning,2007-08-03,1,Xatrix Entertainment,id Software,windows,0,Single-player;Multi-player;Steam Cloud,Action,Action;FPS;Classic,0,65,12,32,32,200000-500000,2.49
+2340,QUAKE II Mission Pack: Ground Zero,2007-08-03,1,Rogue Entertainment,id Software,windows,0,Single-player;Multi-player;Steam Cloud,Action,Action;FPS;Shooter,0,54,33,1,1,200000-500000,2.49
+2350,QUAKE III: Team Arena,2007-08-03,1,id Software,id Software,windows,0,Single-player;Multi-player;Steam Cloud,Action,Action;FPS;Competitive,0,108,31,0,0,200000-500000,12.99
+2360,HeXen: Beyond Heretic,2007-08-03,1,Raven Software,id Software,windows,0,Single-player;Steam Cloud,Action,Action;FPS;Classic,0,249,26,50,50,200000-500000,2.99
+2370,HeXen: Deathkings of the Dark Citadel,2007-08-03,1,Raven Software,id Software,windows,0,Single-player;Steam Cloud,Action,Action;FPS;Classic,0,57,20,0,0,100000-200000,2.99
+2390,Heretic: Shadow of the Serpent Riders,2007-08-03,1,Raven Software,id Software,windows,0,Single-player;Multi-player;Steam Cloud,Action,Classic;Action;FPS,0,417,29,0,0,200000-500000,2.99
+2400,The Ship: Murder Party,2006-07-11,1,Outerlight Ltd.,Blazing Griffin Ltd.,windows,0,Single-player;Multi-player;Steam Trading Cards;Valve Anti-Cheat enabled,Action;Indie;RPG,Multiplayer;Indie;Action,0,4819,792,233,239,1000000-2000000,0.0
+2450,Bloody Good Time,2010-10-29,1,Outerlight Ltd.,Ubisoft,windows,0,Single-player;Multi-player;Steam Achievements,Action,Action;Multiplayer;FPS,12,662,204,193,193,100000-200000,4.29
+2500,Shadowgrounds,2006-05-08,1,Frozenbyte,Frozenbyte,windows;mac,0,Single-player;Shared/Split Screen;Steam Trading Cards,Action,Action;Sci-fi;Top-Down Shooter,0,973,248,186,258,500000-1000000,3.99
+2520,Gumboy - Crazy Adventures™,2006-12-19,1,"CINEMAX, s.r.o.","CINEMAX, s.r.o.",windows,0,Single-player,Casual;Indie,Casual;Indie;Singleplayer,0,52,46,0,0,50000-100000,0.0
+2590,Alpha Prime,2007-11-07,1,Black Element,Bohemia Interactive,windows,0,Single-player,Action,Action;FPS;Sci-fi,0,610,523,0,0,200000-500000,2.99
+2600,Vampire: The Masquerade - Bloodlines,2007-03-22,1,Troika Games,Activision,windows,0,Single-player,Action,RPG;Vampire;Cult Classic,0,6161,362,350,202,500000-1000000,14.99
+2610,GUN™,2006-10-13,1,Neversoft,Activision,windows,0,Single-player,Action,Western;Action;Open World,0,740,87,462,889,50000-100000,9.99
+2620,Call of Duty®,2006-10-13,1,Infinity Ward,Activision,windows,0,Single-player;Multi-player,Action,FPS;World War II;Action,0,1555,117,545,849,200000-500000,14.99
+2630,Call of Duty® 2,2006-10-13,1,Infinity Ward;Aspyr (Mac),Activision;Aspyr (Mac),windows;mac,0,Single-player;Multi-player,Action,Action;World War II;FPS,0,2434,236,750,1041,200000-500000,14.99
+2640,Call of Duty: United Offensive,2006-10-13,1,Gray Matter Studios,Activision,windows,0,Single-player;Multi-player,Action,Action;World War II;FPS,0,490,97,0,0,200000-500000,14.99
+2710,Act of War: Direct Action,2008-03-12,1,Eugen Systems,THQ Nordic,windows,0,Single-player;Multi-player,Action,Action;Strategy;RTS,0,180,33,0,0,20000-50000,1.99
+2720,ThreadSpace: Hyperbol,2007-07-12,1,Iocaine Studios,Atari,windows,0,Single-player;Multi-player;Includes level editor,Action;Indie;Strategy,Strategy;Action;Indie,0,31,9,0,0,20000-50000,3.99
+2780,ARMA: Combat Operations,2008-03-12,1,Bohemia Interactive,Bohemia Interactive,windows,0,Single-player;Multi-player;Includes level editor,Action,Action;Simulation;Shooter,0,145,77,0,0,20000-50000,5.99
+2800,X2: The Threat,2006-07-21,1,Egosoft,Egosoft,windows,0,Single-player;Captions available;Steam Cloud,Strategy,Space;Strategy;Simulation,0,212,50,732,732,200000-500000,4.99
+2810,X3: Reunion,2006-07-21,1,Egosoft,Egosoft,windows;mac;linux,0,Single-player;Captions available;Steam Cloud,Strategy,Space;Simulation;Strategy,0,282,113,831,1232,200000-500000,9.99
+2820,X3: Terran Conflict,2008-10-16,1,Egosoft,Egosoft,windows;mac;linux,0,Single-player;Steam Achievements;Full controller support;Captions available;Steam Cloud,Action;Simulation;Strategy,Space;Simulation;Sci-fi,33,1633,272,972,1273,500000-1000000,15.99
+2840,X: Beyond the Frontier,2010-10-08,1,Egosoft,Egosoft,windows,0,Single-player;Steam Cloud,Simulation;Strategy,Simulation;Space;Strategy,0,142,48,648,648,200000-500000,3.49
+2850,X: Tension,2010-10-08,1,Egosoft,Egosoft,windows,0,Single-player;Steam Cloud,Simulation;Strategy,Simulation;Strategy;Space,0,57,18,13,13,20000-50000,3.49
+2870,X Rebirth,2013-11-15,1,Egosoft,Egosoft,windows;mac;linux,0,Single-player;Steam Achievements;Full controller support;Steam Trading Cards;Captions available;Steam Workshop;Steam Cloud,Action;Simulation,Space;Simulation;Sci-fi,69,2832,4032,1744,3386,200000-500000,24.99
+2900,688(I) Hunter/Killer,2006-10-26,1,Sonalysts,Strategy First,windows,0,Single-player;Multi-player,Strategy,Strategy;Simulation;Naval,0,52,17,0,0,20000-50000,22.99
+2910,Fleet Command,2006-10-26,1,Sonalysts,Strategy First,windows,0,Single-player,Strategy,Strategy;Simulation;Naval,0,127,31,0,0,50000-100000,22.99
+2920,Sub Command,2006-10-26,1,Sonalysts,Strategy First,windows,0,Single-player;Multi-player;Co-op;Includes level editor,Strategy,Strategy;Simulation;Naval,0,33,14,0,0,20000-50000,22.99
+2990,FlatOut 2™,2006-12-21,1,Bugbear Entertainment,Strategy First,windows,0,Single-player,Racing,Racing;Destruction;Multiplayer,0,5438,343,293,351,500000-1000000,5.99
+3010,Xpand Rally,2006-08-24,1,Techland,Techland,windows,0,Single-player;Multi-player,Racing,Racing;Multiplayer,0,139,39,939,939,20000-50000,3.99
+3020,Call of Juarez™,2007-11-08,1,Techland,Techland Publishing,windows,0,Single-player;Multi-player;Steam Trading Cards,Action,Western;Action;FPS,0,793,198,46,60,100000-200000,8.59
+3050,Xpand Rally Xtreme,2008-10-08,1,Techland,Techland,windows,0,Single-player;Multi-player,Racing,Racing;Offroad;Simulation,0,71,36,0,0,20000-50000,3.99
+3130,Men of War: Red Tide,2009-11-01,1,1C Entertainment,1C Entertainment;1C-SoftClub,windows,0,Single-player;Steam Cloud,Strategy,Strategy;World War II;RTS,0,294,69,0,0,200000-500000,3.99
+3170,King's Bounty: Armored Princess,2009-11-19,1,Katauri Interactive,1C Entertainment,windows;mac,0,Single-player;Steam Cloud,RPG;Strategy,RPG;Turn-Based Strategy;Strategy,0,482,53,1422,1429,200000-500000,7.99
+3230,Genesis Rising,2007-08-06,1,Metamorf,THQ Nordic,windows,0,Single-player;Multi-player,Strategy,Strategy;Space;Sci-fi,0,30,94,0,0,20000-50000,4.49
+3260,Safecracker: The Ultimate Puzzle Adventure,2007-08-29,1,Kheops Studio,HandyGames,windows,0,Single-player,Adventure;Casual,Puzzle;Adventure;Casual,0,256,172,1,1,50000-100000,4.49
+3270,Painkiller Overdose,2007-10-30,1,Mindware Studios,THQ Nordic,windows,0,Single-player;Multi-player,Action,Action;FPS;Shooter,0,429,137,270,270,200000-500000,4.49
+3330,Zuma Deluxe,2006-08-30,1,"PopCap Games, Inc.","PopCap Games, Inc.",windows;mac,0,Single-player,Casual,Casual;Match 3;Puzzle,0,437,37,267,267,100000-200000,4.25
+3410,Heavy Weapon Deluxe,2006-08-30,1,"PopCap Games, Inc.","PopCap Games, Inc.",windows,0,Single-player,Casual,Casual;Arcade;Action,0,71,28,0,0,20000-50000,4.25
+3480,Peggle Deluxe,2007-03-06,1,"PopCap Games, Inc.","PopCap Games, Inc.",windows;mac,0,Single-player,Casual,Casual;Puzzle;Arcade,0,1106,66,214,254,200000-500000,4.25
+3483,Peggle Extreme,2007-09-11,1,"PopCap Games, Inc.","PopCap Games, Inc.",windows,0,Single-player,Casual,Casual;Puzzle;Free to Play,0,707,58,1,1,200000-500000,0.0
+3490,Venice Deluxe,2007-06-25,1,"Retro64, Inc.","PopCap Games, Inc.",windows,0,Single-player,Casual,Casual,0,10,2,0,0,20000-50000,4.25
+3500,Mystery P.I.™ - The Lottery Ticket,2007-10-16,1,SpinTop Games,"PopCap Games, Inc.",windows,0,Single-player,Casual,Casual;Hidden Object,0,10,3,0,0,20000-50000,4.25
+3510,Amazing Adventures The Lost Tomb™,2007-12-13,1,SpinTop Games,"PopCap Games, Inc.",windows,0,Single-player,Casual,Casual;Hidden Object;Puzzle,0,21,8,0,0,20000-50000,4.25
+3520,Mystery P.I.™ - The Vegas Heist,2008-06-05,1,SpinTop Games,"PopCap Games, Inc.",windows,0,Single-player,Casual,Casual;Hidden Object,0,11,5,0,0,20000-50000,4.25
+3530,Amazing Adventures Around the World,2009-04-15,1,SpinTop Games,"PopCap Games, Inc.",windows,0,Single-player,Casual,Casual;Hidden Object;Puzzle,0,23,7,0,0,20000-50000,4.25
