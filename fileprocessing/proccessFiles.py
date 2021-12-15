@@ -1,6 +1,7 @@
 import os
 from sys import platform
 import numpy
+import csv
 
 def genericfiles(folder,filenameEnd):
     dirname =  os.getcwd()
@@ -43,7 +44,18 @@ def processCSV(CSVfile, debugprint=0):
             index += 1
     return items
 
+def processCSV2(CSVfile):
+    
+    items = []
+    with open(CSVfile,newline='') as csvFile:
+        read = csv.reader(csvFile,delimiter=',',quotechar='|')
+        for row in read:
+            
 
+            items.append(row)
+            
+    return items
+    
 
 def getCSVSubSet(CSVfile,SubSetsize=100,filter=None,outputname="CSVfile<filter>.csv"):
     """

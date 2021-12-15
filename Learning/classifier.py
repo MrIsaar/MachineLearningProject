@@ -1,9 +1,11 @@
 import math
 import numpy as np
 import torch
-from fileprocessing.proccessFiles import genericfiles
-from fileprocessing.proccessFiles import processCSV
+import sys
+sys.path.insert(1, 'fileprocessing')
+from proccessFiles import genericfiles
+from proccessFiles import processCSV2
 
 
-games = processCSV(genericfiles("steam","steam.csv"))
+games = processCSV2(genericfiles("steam","steam.csv"))
 print(games[0])
