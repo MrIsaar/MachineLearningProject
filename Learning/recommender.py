@@ -1,6 +1,5 @@
 import math
 import numpy as np
-import scipy
 import torch
 
 data = [[1,2],[3,4]]
