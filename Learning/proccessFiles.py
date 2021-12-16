@@ -1,16 +1,17 @@
 import os
 from sys import platform
 import numpy as np
+from numpy.core.arrayprint import DatetimeFormat
 import torch
 import csv
 from torchtext.data.utils import get_tokenizer
 from torchtext.vocab import build_vocab_from_iterator
+from datetime import datetime
 
 tokenizer = get_tokenizer('basic_english')
 
-
 def yield_tokens(data_iter):
-    for _, text in data_iter:
+    for text in data_iter:
         yield tokenizer(text)
 
 
@@ -55,18 +56,47 @@ def processCSV(CSVfile, debugprint=0):
             index += 1
     return items
 
+def parseString(temp):
+    if type(temp) is str:
+        try:
+            temp=float(temp)
+        except:
+            try:
+                numbers = temp.split('-')
+                if(len(numbers) == 3):
+                    temp=datetime.strptime(temp, '%Y-%m-%d')
+                    temp=temp.day+temp.month*100+temp.year*10000
+                if(len(numbers) == 2):
+                    return float(numbers[1]) - (float(numbers[0])/2)
+            except:     
+                temp=len(temp)
+    return temp
+
 def processCSV2(CSVfile):
     
-    items = torch.tensor([])
-    
+    items = None
+    attributes = None
     with open(CSVfile,newline='',encoding='utf-8') as csvFile:
-        read = csv.reader(csvFile,delimiter=',',quotechar='|')
+        read = csv.reader(csvFile,delimiter=',',quotechar='"',skipinitialspace=True)
         for row in read:
+            if attributes is None:
+                
+                attributes = np.array(row)
+            else:
+                
+                item = np.ones((1,len(row)))
+                for i in range(len(row)):
+                    
+                    temp = row[i]
+                    
+                    item[0][i] = parseString(temp)
+                if items is None:
+                    items = np.ones((1,len(row)))
+                    items = items * item
+                else:
+                    items = np.concatenate((items,item))
             
-
-            items.add_(torch.tensor(row))
-            
-    return items
+    return (attributes,items)
     
 
 def getCSVSubSet(CSVfile,SubSetsize=100,filter=None,outputname="CSVfile<filter>.csv"):
