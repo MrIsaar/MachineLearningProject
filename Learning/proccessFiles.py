@@ -4,15 +4,9 @@ import numpy as np
 from numpy.core.arrayprint import DatetimeFormat
 import torch
 import csv
-from torchtext.data.utils import get_tokenizer
-from torchtext.vocab import build_vocab_from_iterator
+
 from datetime import datetime
 
-tokenizer = get_tokenizer('basic_english')
-
-def yield_tokens(data_iter):
-    for text in data_iter:
-        yield tokenizer(text)
 
 
 def genericfiles(folder,filenameEnd):
