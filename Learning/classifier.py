@@ -6,9 +6,9 @@ sys.path.insert(1, 'fileprocessing')
 from proccessFiles import genericfiles
 from proccessFiles import processCSV2
 
-
-games = processCSV2(genericfiles("steam","steam.csv"))
-print(games[0])
+print("proccessing file")
+attributes,games = processCSV2(genericfiles("steam","steam.csv"))
+print(attributes)
 games = torch.from_numpy(games)
 if torch.cuda.is_available():
     games = games.to('cuda')
