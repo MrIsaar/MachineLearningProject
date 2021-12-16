@@ -47,7 +47,7 @@ def processCSV(CSVfile, debugprint=0):
 def processCSV2(CSVfile):
     
     items = []
-    with open(CSVfile,newline='') as csvFile:
+    with open(CSVfile,newline='',encoding='utf-8') as csvFile:
         read = csv.reader(csvFile,delimiter=',',quotechar='|')
         for row in read:
             

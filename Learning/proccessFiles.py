@@ -1,7 +1,18 @@
 import os
 from sys import platform
-import numpy
+import numpy as np
+import torch
 import csv
+from torchtext.data.utils import get_tokenizer
+from torchtext.vocab import build_vocab_from_iterator
+
+tokenizer = get_tokenizer('basic_english')
+
+
+def yield_tokens(data_iter):
+    for _, text in data_iter:
+        yield tokenizer(text)
+
 
 def genericfiles(folder,filenameEnd):
     dirname =  os.getcwd()
@@ -46,13 +57,14 @@ def processCSV(CSVfile, debugprint=0):
 
 def processCSV2(CSVfile):
     
-    items = []
-    with open(CSVfile,newline='') as csvFile:
+    items = torch.tensor([])
+    
+    with open(CSVfile,newline='',encoding='utf-8') as csvFile:
         read = csv.reader(csvFile,delimiter=',',quotechar='|')
         for row in read:
             
 
-            items.append(row)
+            items.add_(torch.tensor(row))
             
     return items
     
