@@ -60,8 +60,10 @@ def parseString(temp):
                 if(len(numbers) == 3):
                     temp=datetime.strptime(temp, '%Y-%m-%d')
                     temp=temp.day+temp.month*100+temp.year*10000
-                if(len(numbers) == 2):
+                elif(len(numbers) == 2):
                     return float(numbers[1]) - (float(numbers[0])/2)
+                else:
+                    temp=len(temp)
             except:     
                 temp=len(temp)
     return temp
