@@ -1,6 +1,6 @@
 import torch
 from torch.utils.data import Dataset
-
+import numpy as np
 import sys
 import os
 import pandas as pd
@@ -14,4 +14,5 @@ class GamesData(Dataset):
         return len(self.games)
     
     def __getitem__(self, index):
-        return self.games.__getitem__(index)
+        ser = self.games.iloc[index]
+        return np.array([ser.to_numpy(),1])
