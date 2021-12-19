@@ -111,7 +111,7 @@ def writeList(line,file,label):
             file.write(",\""+str(label)+"\"\n")
         item_n+=1
 
-def getCSVSubSet(CSVfile,label,SubSetsize=None,filter=None,outputname="CSVfile<filter>.csv"):
+def getCSVSubSet(CSVfile,label,SubSetsize=None,SubSetOffset=0,filter=None,outputname="CSVfile<filter>.csv"):
     """
     creates a subsetfile of a CSV of designated size 
 
@@ -148,7 +148,7 @@ def getCSVSubSet(CSVfile,label,SubSetsize=None,filter=None,outputname="CSVfile<f
                     writeList(line,file,"label")
                     currline+=1
                     continue
-                if SubSetsize == None or currline < SubSetsize:
+                if SubSetsize == None or currline < SubSetOffset+SubSetsize and currline > SubSetOffset:
                     if filter != None and attributes.__contains__(filter[0]):
                         values = line
                         if values[attributes.index(filter[0])].__contains__(filter[1]):
@@ -158,6 +158,9 @@ def getCSVSubSet(CSVfile,label,SubSetsize=None,filter=None,outputname="CSVfile<f
                     else:
                         writeList(line,file,label)
                         currline+=1
+                elif currline < SubSetOffset+SubSetsize:
+                    currline+=1
+                    continue
                 else:
                     break
     except Exception as err:
@@ -183,7 +186,9 @@ def combineLists(file0,file1):
 
 if __name__ == "__main__":
     steamcsv = genericfiles("steam","steam.csv")
-    filter = ["genres","Action"]
-    label = 1
+    filter = ["genres","Indie"]
+    note = "test"
+    label = 0
     subset = 500
-    print(getCSVSubSet(steamcsv,label,SubSetsize=subset,filter=filter,outputname="steam"+str(filter[0])+str(filter[1])+str(label)+".csv"))
+    offset = 300
+    print(getCSVSubSet(steamcsv,label,SubSetsize=subset,SubSetOffset=offset,filter=filter,outputname="steam"+note+str(filter[0])+str(filter[1])+str(label)+".csv"))
