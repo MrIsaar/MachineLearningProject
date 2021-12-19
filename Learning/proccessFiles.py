@@ -1,4 +1,5 @@
 import os
+import sys
 from sys import platform
 import numpy as np
 from numpy.core.arrayprint import DatetimeFormat
@@ -53,7 +54,8 @@ def processCSV(CSVfile, debugprint=0):
 def parseString(temp):
     if type(temp) is str:
         try:
-            temp=float(temp)
+            temp=np.float32(temp)
+           
         except:
             try:
                 numbers = temp.split('-')
@@ -61,16 +63,17 @@ def parseString(temp):
                     temp=datetime.strptime(temp, '%Y-%m-%d')
                     temp=temp.day+temp.month*100+temp.year*10000
                 elif(len(numbers) == 2):
-                    return float(numbers[1]) - (float(numbers[0])/2)
+                    return np.float32(numbers[1]) - (np.float32(numbers[0])/2)
                 else:
-                    temp=len(temp)
+                    temp=np.float32(len(temp))
             except:     
-                temp=len(temp)
+                temp=np.float32(len(temp))
     return temp
 
 def processCSV2(CSVfile):
     
     items = None
+    labels = None
     attributes = None
     with open(CSVfile,newline='',encoding='utf-8') as csvFile:
         read = csv.reader(csvFile,delimiter=',',quotechar='"',skipinitialspace=True)
@@ -88,14 +91,27 @@ def processCSV2(CSVfile):
                     item[0][i] = parseString(temp)
                 if items is None:
                     items = np.ones((1,len(row)))
+                    labels = np.ones((1,1)) * item[0][-1]
                     items = items * item
+                    
                 else:
                     items = np.concatenate((items,item))
-            
-    return (attributes,items)
+                    labels = np.concatenate((labels,item.T[-1:]))
+    output = (items,labels)
+    return (attributes,output)
     
+    
+def writeList(line,file,label):
+    item_n = 0
+    for item in line:
+        file.write('"'+str(item)+'"')
+        if(item_n < len(line)-1):
+            file.write(',')
+        else:
+            file.write(",\""+str(label)+"\"\n")
+        item_n+=1
 
-def getCSVSubSet(CSVfile,SubSetsize=100,filter=None,outputname="CSVfile<filter>.csv"):
+def getCSVSubSet(CSVfile,label,SubSetsize=None,filter=None,outputname="CSVfile<filter>.csv"):
     """
     creates a subsetfile of a CSV of designated size 
 
@@ -121,26 +137,30 @@ def getCSVSubSet(CSVfile,SubSetsize=100,filter=None,outputname="CSVfile<filter>.
             outputname = genericfiles("results",outputname) + ".csv"
 
 
-    file = open(outputname,"w")
+    file = open(outputname,"w",encoding='utf-8')
     try:
-        with open(CSVfile) as f:
-            for line in f:
+        with open(CSVfile,newline='',encoding='utf-8') as f:
+            read = csv.reader(f,delimiter=',',quotechar='"',skipinitialspace=True)
+            for line in read:
                 if currline == 0:
-                    attributes = line.strip().split(',')
-                    file.write(line)
+                    attributes = line
+                    
+                    writeList(line,file,"label")
                     currline+=1
                     continue
-                if currline < SubSetsize:
+                if SubSetsize == None or currline < SubSetsize:
                     if filter != None and attributes.__contains__(filter[0]):
-                        values = line.strip().split(',')
+                        values = line
                         if values[attributes.index(filter[0])].__contains__(filter[1]):
-                            file.write(line)
+                            item_n = 0
+                            writeList(line,file,label)
+                            currline+=1
                     else:
-                        file.write(line)
-                    currline+=1
+                        writeList(line,file,label)
+                        currline+=1
                 else:
                     break
-    except:
+    except Exception as err:
         file.close()
         
         return None
@@ -149,8 +169,21 @@ def getCSVSubSet(CSVfile,SubSetsize=100,filter=None,outputname="CSVfile<filter>.
     return outputname
 
 
+def combineLists(file0,file1):
+    
+    list1 = processCSV2(file0)
+    list2 = processCSV2(file1)
+
+    attributes, lgames = list1
+    a ,dgames = list2   
+    normalizer = np.ones((1,len(lgames[0][0])))
+    games = (np.concatenate((lgames[0],dgames[0])),np.matmul(np.concatenate((lgames[1],dgames[1])),normalizer))
+    return attributes,games
+
 
 if __name__ == "__main__":
     steamcsv = genericfiles("steam","steam.csv")
     filter = ["genres","Action"]
-    print(getCSVSubSet(steamcsv,filter=filter,outputname="steamAction.csv"))
+    label = 1
+    subset = 500
+    print(getCSVSubSet(steamcsv,label,SubSetsize=subset,filter=filter,outputname="steam"+str(filter[0])+str(filter[1])+str(label)+".csv"))
