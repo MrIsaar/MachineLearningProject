@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>846</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Steam Recommender</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="MainLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Steam Recommender</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reloadButton">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>480</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>New Suggestions</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>20</y>
+      <width>531</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="outputLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_13">
+       <item>
+        <widget class="QLabel" name="label0">
+         <property name="text">
+          <string>GameData</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="like0">
+         <property name="text">
+          <string>like</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="dislike0">
+         <property name="maximumSize">
+          <size>
+           <width>171</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>dislike</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <item>
+        <widget class="QLabel" name="label1">
+         <property name="text">
+          <string>GameData</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="like1">
+         <property name="text">
+          <string>like</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="dislike1">
+         <property name="text">
+          <string>dislike</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_16">
+       <item>
+        <widget class="QLabel" name="label2">
+         <property name="text">
+          <string>GameData</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="like2">
+         <property name="text">
+          <string>like</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="dislike2">
+         <property name="text">
+          <string>dislike</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_17">
+       <item>
+        <widget class="QLabel" name="label3">
+         <property name="text">
+          <string>GameData</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="like3">
+         <property name="text">
+          <string>like</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="dislike3">
+         <property name="text">
+          <string>dislike</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_18">
+       <item>
+        <widget class="QLabel" name="label4">
+         <property name="text">
+          <string>GameData</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="like4">
+         <property name="text">
+          <string>like</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="dislike4">
+         <property name="text">
+          <string>dislike</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_19">
+       <item>
+        <widget class="QLabel" name="label5">
+         <property name="text">
+          <string>GameData</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="like5">
+         <property name="text">
+          <string>like</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="dislike5">
+         <property name="text">
+          <string>dislike</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_21">
+       <item>
+        <widget class="QLabel" name="label6">
+         <property name="text">
+          <string>GameData</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="like6">
+         <property name="text">
+          <string>like</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="dislike6">
+         <property name="text">
+          <string>dislike</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_20">
+       <item>
+        <widget class="QLabel" name="label7">
+         <property name="text">
+          <string>GameData</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="like7">
+         <property name="text">
+          <string>like</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="dislike7">
+         <property name="text">
+          <string>dislike</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_14">
+       <item>
+        <widget class="QLabel" name="label8">
+         <property name="text">
+          <string>GameData</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="like8">
+         <property name="text">
+          <string>like</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="dislike8">
+         <property name="text">
+          <string>dislike</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <item>
+        <widget class="QLabel" name="label9">
+         <property name="text">
+          <string>GameData</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="like9">
+         <property name="text">
+          <string>like</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="dislike9">
+         <property name="text">
+          <string>dislike</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>846</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

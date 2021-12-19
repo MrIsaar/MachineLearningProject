@@ -102,7 +102,7 @@ train_model.save('ActionGoodIndieBad')
 reloaded = tf.keras.models.load_model('ActionGoodIndieBad')
 
 index = 480
-size = 40
+size = 20
 features_dict = {name:values[index:size+index] for name, values in train_features_dict.items()}
 before = train_model(features_dict)
 after = reloaded(features_dict)

@@ -151,7 +151,23 @@ def getCSVSubSet(CSVfile,label,SubSetsize=None,SubSetOffset=0,filter=None,output
                 if SubSetsize == None or currline < SubSetOffset+SubSetsize and currline > SubSetOffset:
                     if filter != None and attributes.__contains__(filter[0]):
                         values = line
-                        if values[attributes.index(filter[0])].__contains__(filter[1]):
+                        if filter[1].__contains__("<"):
+                            lt = filter[1].split("<")
+                            try:
+                                if float(values[attributes.index(filter[0])]) < float(lt[1]):
+                                    writeList(line,file,label)
+                                    currline+=1
+                            except:
+                                pass
+                        elif filter[1].__contains__(">"):
+                            gt = filter[1].split(">")
+                            try:
+                                if float(values[attributes.index(filter[0])]) > float(gt[1]):
+                                    writeList(line,file,label)
+                                    currline+=1
+                            except:
+                                pass        
+                        elif values[attributes.index(filter[0])].__contains__(filter[1]):
                             item_n = 0
                             writeList(line,file,label)
                             currline+=1
@@ -186,9 +202,12 @@ def combineLists(file0,file1):
 
 if __name__ == "__main__":
     steamcsv = genericfiles("steam","steam.csv")
-    filter = ["genres","Indie"]
-    note = "test"
+    filter = ["appid",">0"]
+    filenameFilter = [filter[0],filter[1]] #remove < and >
+    note = "train"
     label = 0
-    subset = 500
-    offset = 300
-    print(getCSVSubSet(steamcsv,label,SubSetsize=subset,SubSetOffset=offset,filter=filter,outputname="steam"+note+str(filter[0])+str(filter[1])+str(label)+".csv"))
+    subset = 20000
+    offset = 0
+    if filter[1].__contains__('<') or filter[1].__contains__('>'):
+        filenameFilter[1] = filenameFilter[1][1:]
+    print(getCSVSubSet(steamcsv,label,SubSetsize=subset,SubSetOffset=offset,filter=filter,outputname="steam"+note+str(filenameFilter[0])+str(filenameFilter[1])+str(label)+".csv"))
