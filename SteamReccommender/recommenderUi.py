@@ -211,16 +211,15 @@ class Ui_MainWindow(object):
     def clicked(self,b):
         label = None
         if b.objecName()[-1] == 0: self.label0.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 0: self.label0.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 0: self.label0.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 0: self.label0.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 0: self.label0.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 0: self.label0.setText("You liked it" + b.objectName())    
-        if b.objecName()[-1] == 0: self.label0.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 0: self.label0.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 0: self.label0.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 0: self.label0.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 0: self.label0.setText("You liked it" + b.objectName())
+        if b.objecName()[-1] == 1: self.label1.setText("You liked it" + b.objectName())
+        if b.objecName()[-1] == 2: self.label2.setText("You liked it" + b.objectName())
+        if b.objecName()[-1] == 3: self.label3.setText("You liked it" + b.objectName())
+        if b.objecName()[-1] == 4: self.label4.setText("You liked it" + b.objectName())
+        if b.objecName()[-1] == 5: self.label5.setText("You liked it" + b.objectName())    
+        if b.objecName()[-1] == 6: self.label6.setText("You liked it" + b.objectName())
+        if b.objecName()[-1] == 7: self.label7.setText("You liked it" + b.objectName())
+        if b.objecName()[-1] == 8: self.label8.setText("You liked it" + b.objectName())
+        if b.objecName()[-1] == 9: self.label9.setText("You liked it" + b.objectName())
         
         self.update(b)
     def update(self,b):
