@@ -161,8 +161,10 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.setSizeRestrains()
         
     def setSizeRestrains(self):
+        
         self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
         self.dislike1.setMaximumSize(QtCore.QSize(100, 16777215))
         self.dislike2.setMaximumSize(QtCore.QSize(100, 16777215))
@@ -173,16 +175,16 @@ class Ui_MainWindow(object):
         self.dislike7.setMaximumSize(QtCore.QSize(100, 16777215))
         self.dislike8.setMaximumSize(QtCore.QSize(100, 16777215))
         self.dislike9.setMaximumSize(QtCore.QSize(100, 16777215))
-        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
-        self.dislike1.setMaximumSize(QtCore.QSize(100, 16777215))
-        self.dislike2.setMaximumSize(QtCore.QSize(100, 16777215))
-        self.dislike3.setMaximumSize(QtCore.QSize(100, 16777215))
-        self.dislike4.setMaximumSize(QtCore.QSize(100, 16777215))
-        self.dislike5.setMaximumSize(QtCore.QSize(100, 16777215))
-        self.dislike6.setMaximumSize(QtCore.QSize(100, 16777215))
-        self.dislike7.setMaximumSize(QtCore.QSize(100, 16777215))
-        self.dislike8.setMaximumSize(QtCore.QSize(100, 16777215))
-        self.dislike9.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.like0.setMaximumSize   (QtCore.QSize(100, 16777215))
+        self.like1.setMaximumSize   (QtCore.QSize(100, 16777215))
+        self.like2.setMaximumSize   (QtCore.QSize(100, 16777215))
+        self.like3.setMaximumSize   (QtCore.QSize(100, 16777215))
+        self.like4.setMaximumSize   (QtCore.QSize(100, 16777215))
+        self.like5.setMaximumSize   (QtCore.QSize(100, 16777215))
+        self.like6.setMaximumSize   (QtCore.QSize(100, 16777215))
+        self.like7.setMaximumSize   (QtCore.QSize(100, 16777215))
+        self.like8.setMaximumSize   (QtCore.QSize(100, 16777215))
+        self.like9.setMaximumSize   (QtCore.QSize(100, 16777215))
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -285,9 +287,7 @@ class Ui_MainWindow(object):
             if b.objectName()[-1] == '8': self.label8.setText("You disliked it" + b.objectName()[-1])
             if b.objectName()[-1] == '9': self.label9.setText("You disliked it" + b.objectName()[-1])
         
-        self.update(b)
-    def update(self,b):
-        b.adjustSize()
+   
 
 
 if __name__ == "__main__":

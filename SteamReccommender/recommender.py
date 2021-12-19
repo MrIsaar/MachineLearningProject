@@ -30,7 +30,10 @@ class Recommender():
                 ignored +=1
                 continue
             approved+=1
-            tout += str(databatch['name'][i]) + " by "+ str(databatch['developer'][i]) +" for $"+ str(databatch['price'][i]) +" appid: " + str(databatch['appid'][i]) + "\n"
+            dev = str(databatch['developer'][i])
+            if len(dev) > 30:
+                dev = dev[:29]
+            tout += str(databatch['name'][i]) + " by "+ dev +" for $"+ str(databatch['price'][i]) +" appid: " + str(databatch['appid'][i]) + "\n"
             output = np.append(output,tout)
             
             if not maxcount is None and approved >= maxcount:
