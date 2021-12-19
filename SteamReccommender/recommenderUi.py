@@ -9,12 +9,13 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from recommender import Recommender
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(846, 600)
+        MainWindow.resize(1500, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.MainLabel = QtWidgets.QLabel(self.centralwidget)
@@ -24,7 +25,7 @@ class Ui_MainWindow(object):
         self.reloadButton.setGeometry(QtCore.QRect(80, 480, 151, 61))
         self.reloadButton.setObjectName("reloadButton")
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(260, 20, 531, 511))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(260, 20, 1200, 511))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.outputLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.outputLayout.setContentsMargins(0, 0, 0, 0)
@@ -38,7 +39,7 @@ class Ui_MainWindow(object):
         self.like0.setObjectName("like0")
         self.horizontalLayout_13.addWidget(self.like0)
         self.dislike0 = QtWidgets.QPushButton(self.verticalLayoutWidget)
-        self.dislike0.setMaximumSize(QtCore.QSize(171, 16777215))
+        
         self.dislike0.setObjectName("dislike0")
         self.horizontalLayout_13.addWidget(self.dislike0)
         self.outputLayout.addLayout(self.horizontalLayout_13)
@@ -160,6 +161,30 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        
+    def setSizeRestrains(self):
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.dislike0.setMaximumSize(QtCore.QSize(100, 16777215))
+        
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -208,18 +233,59 @@ class Ui_MainWindow(object):
         self.like8.clicked.connect(lambda:self.clicked(self.like8))
         self.like9.clicked.connect(lambda:self.clicked(self.like9))
         
+        self.dislike0.clicked.connect(lambda:self.clicked(self.dislike0))
+        self.dislike1.clicked.connect(lambda:self.clicked(self.dislike1))
+        self.dislike2.clicked.connect(lambda:self.clicked(self.dislike2))
+        self.dislike3.clicked.connect(lambda:self.clicked(self.dislike3))
+        self.dislike4.clicked.connect(lambda:self.clicked(self.dislike4))
+        self.dislike5.clicked.connect(lambda:self.clicked(self.dislike5))
+        self.dislike6.clicked.connect(lambda:self.clicked(self.dislike6))
+        self.dislike7.clicked.connect(lambda:self.clicked(self.dislike7))
+        self.dislike8.clicked.connect(lambda:self.clicked(self.dislike8))
+        self.dislike9.clicked.connect(lambda:self.clicked(self.dislike9))
+        
+        self.recommender = Recommender()
+        self.reloadButton.clicked.connect(self.loadData)
+        
+    def loadData(self):
+        data = self.recommender.recommended(maxcount=10)
+        
+        self.label0.setText(data[0])
+        self.label1.setText(data[1])
+        self.label2.setText(data[2])
+        self.label3.setText(data[3])
+        self.label4.setText(data[4])
+        self.label5.setText(data[5])
+        self.label6.setText(data[6])
+        self.label7.setText(data[7])
+        self.label8.setText(data[8])
+        self.label9.setText(data[9])
+        
+        
     def clicked(self,b):
         label = None
-        if b.objecName()[-1] == 0: self.label0.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 1: self.label1.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 2: self.label2.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 3: self.label3.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 4: self.label4.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 5: self.label5.setText("You liked it" + b.objectName())    
-        if b.objecName()[-1] == 6: self.label6.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 7: self.label7.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 8: self.label8.setText("You liked it" + b.objectName())
-        if b.objecName()[-1] == 9: self.label9.setText("You liked it" + b.objectName())
+        if b.objectName()[0] == 'l':
+            if b.objectName()[-1] == '0': self.label0.setText("You liked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '1': self.label1.setText("You liked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '2': self.label2.setText("You liked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '3': self.label3.setText("You liked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '4': self.label4.setText("You liked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '5': self.label5.setText("You liked it" + b.objectName()[-1])    
+            if b.objectName()[-1] == '6': self.label6.setText("You liked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '7': self.label7.setText("You liked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '8': self.label8.setText("You liked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '9': self.label9.setText("You liked it" + b.objectName()[-1])
+        else:
+            if b.objectName()[-1] == '0': self.label0.setText("You disliked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '1': self.label1.setText("You disliked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '2': self.label2.setText("You disliked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '3': self.label3.setText("You disliked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '4': self.label4.setText("You disliked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '5': self.label5.setText("You disliked it" + b.objectName()[-1])    
+            if b.objectName()[-1] == '6': self.label6.setText("You disliked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '7': self.label7.setText("You disliked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '8': self.label8.setText("You disliked it" + b.objectName()[-1])
+            if b.objectName()[-1] == '9': self.label9.setText("You disliked it" + b.objectName()[-1])
         
         self.update(b)
     def update(self,b):
