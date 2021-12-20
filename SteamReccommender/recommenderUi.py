@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.MainLabel = QtWidgets.QLabel(self.centralwidget)
-        self.MainLabel.setGeometry(QtCore.QRect(20, 10, 131, 41))
+        self.MainLabel.setGeometry(QtCore.QRect(20, 10, 200, 100))
         self.MainLabel.setObjectName("MainLabel")
         self.reloadButton = QtWidgets.QPushButton(self.centralwidget)
         self.reloadButton.setGeometry(QtCore.QRect(80, 480, 151, 61))
@@ -189,7 +189,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Steam Recommender"))
-        self.MainLabel.setText(_translate("MainWindow", "Steam Recommender"))
+        self.MainLabel.setText(_translate("MainWindow", "Steam Recommender\nwait a few seconds\nwhen loading suggestions"))
         self.reloadButton.setText(_translate("MainWindow", "New Suggestions"))
         self.label0.setText(_translate("MainWindow", "GameData"))
         self.like0.setText(_translate("MainWindow", "like"))

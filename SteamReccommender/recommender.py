@@ -15,6 +15,7 @@ class Recommender():
     def rate(self, index ,label):
         if self.recent is None:
             return
+        self.needsUpdate = True
         out = self.recent[index]
         appendFile(genericfiles("steam","user.csv"),out,label)
         
@@ -54,7 +55,9 @@ class Recommender():
         return output
 
     def updatemodel(self):
-        self.PreviousLearned = learnfromFile(genericfiles("steam","user.csv"))
+        if self.needsUpdate:
+            self.PreviousLearned = learnfromFile(genericfiles("steam","user.csv"))
+            self.needsUpdate = False
 
     def __init__(self):
         try:
@@ -66,7 +69,7 @@ class Recommender():
             
             
             
-
+        self.needsUpdate = False
         self.recent = None
         self.features_dict = valuesfromFile(genericfiles("steam","trainPopular.csv"))
         
