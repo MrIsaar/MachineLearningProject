@@ -245,6 +245,7 @@ class Ui_MainWindow(object):
         self.dislike9.clicked.connect(lambda:self.clicked(self.dislike9))
         
         self.recommender = Recommender()
+        self.loadData()
         self.reloadButton.clicked.connect(self.loadData)
         
     def loadData(self):
@@ -261,31 +262,36 @@ class Ui_MainWindow(object):
         self.label8.setText(data[8])
         self.label9.setText(data[9])
         
+        self.recommender.updatemodel()
+        
         
     def clicked(self,b):
         label = None
-        if b.objectName()[0] == 'l':
-            if b.objectName()[-1] == '0': self.label0.setText("You liked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '1': self.label1.setText("You liked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '2': self.label2.setText("You liked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '3': self.label3.setText("You liked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '4': self.label4.setText("You liked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '5': self.label5.setText("You liked it" + b.objectName()[-1])    
-            if b.objectName()[-1] == '6': self.label6.setText("You liked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '7': self.label7.setText("You liked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '8': self.label8.setText("You liked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '9': self.label9.setText("You liked it" + b.objectName()[-1])
-        else:
-            if b.objectName()[-1] == '0': self.label0.setText("You disliked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '1': self.label1.setText("You disliked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '2': self.label2.setText("You disliked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '3': self.label3.setText("You disliked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '4': self.label4.setText("You disliked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '5': self.label5.setText("You disliked it" + b.objectName()[-1])    
-            if b.objectName()[-1] == '6': self.label6.setText("You disliked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '7': self.label7.setText("You disliked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '8': self.label8.setText("You disliked it" + b.objectName()[-1])
-            if b.objectName()[-1] == '9': self.label9.setText("You disliked it" + b.objectName()[-1])
+        try:
+            if b.objectName()[0] == 'l':
+                if b.objectName()[-1] == '0': self.recommender.rate(0,1)
+                if b.objectName()[-1] == '1': self.recommender.rate(1,1)
+                if b.objectName()[-1] == '2': self.recommender.rate(2,1)
+                if b.objectName()[-1] == '3': self.recommender.rate(3,1)
+                if b.objectName()[-1] == '4': self.recommender.rate(4,1)
+                if b.objectName()[-1] == '5': self.recommender.rate(5,1)    
+                if b.objectName()[-1] == '6': self.recommender.rate(6,1)
+                if b.objectName()[-1] == '7': self.recommender.rate(7,1)
+                if b.objectName()[-1] == '8': self.recommender.rate(8,1)
+                if b.objectName()[-1] == '9': self.recommender.rate(9,1)
+            else:
+                if b.objectName()[-1] == '0': self.recommender.rate(0,-1)
+                if b.objectName()[-1] == '1': self.recommender.rate(1,-1)
+                if b.objectName()[-1] == '2': self.recommender.rate(2,-1)
+                if b.objectName()[-1] == '3': self.recommender.rate(3,-1)
+                if b.objectName()[-1] == '4': self.recommender.rate(4,-1)
+                if b.objectName()[-1] == '5': self.recommender.rate(5,-1)    
+                if b.objectName()[-1] == '6': self.recommender.rate(6,-1)
+                if b.objectName()[-1] == '7': self.recommender.rate(7,-1)
+                if b.objectName()[-1] == '8': self.recommender.rate(8,-1)
+                if b.objectName()[-1] == '9': self.recommender.rate(9,-1)
+        except:
+            pass
         
    
 

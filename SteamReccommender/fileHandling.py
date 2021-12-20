@@ -1,4 +1,5 @@
 import os
+from os.path import exists
 import sys
 from sys import platform
 import pandas as pd
@@ -43,7 +44,30 @@ def valuesfromFile(file,hasLabel=True):
     return train_features_dict
 
 
+def writeList(line,file,label):
+    item_n = 0
+    for item in line:
+        file.write('"'+str(item)+'"')
+        if(item_n < len(line)-1):
+            file.write(',')
+        else:
+            file.write(",\""+str(label)+"\"\n")
+        item_n+=1
+
     
 def getValuesToPredict(train_features_dict,start=0,size=1):
     features_dict = {name:values[start:size+start] for name, values in train_features_dict.items()}
     return features_dict
+
+def appendFile(filename, appendString,label):
+    file_exists = exists(filename)
+    if file_exists:
+        with open(filename,"a",encoding='utf-8') as file:
+            writeList(appendString,file,label)
+    else:
+        with open(filename,"w",encoding='utf-8') as file:
+            writeList(appendString,file,label)
+    
+
+#appendFile(genericfiles("steam","test.csv"),["10","Counter-Strike","2000-11-01","1","Valve","Valve","windows;mac;linux","0","Multi-player;Online Multi-Player;Local Multi-Player;Valve Anti-Cheat enabled","Action","Action;FPS;Multiplayer","0","124534","3339","17612","317","10000000-20000000","7.19"],"1")
+    
