@@ -38,6 +38,11 @@ except:
     print("not learned model good bye")
     exit()
 
+features_dict = valuesfromFile(genericfiles("steam","trainAction.csv"))
+
+count,total = predictResults(PreviousLearned,features_dict)
+print("train Action vs Indie only: ",count,"/",total)
+
 features_dict = valuesfromFile(genericfiles("steam","testAction.csv"))
 
 count,total = predictResults(PreviousLearned,features_dict)

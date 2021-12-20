@@ -1,0 +1,2 @@
+python SteamReccommender/recommenderUi.py
+pause

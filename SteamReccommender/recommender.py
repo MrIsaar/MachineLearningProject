@@ -2,6 +2,7 @@ import tensorflow as tf
 import numpy as np
 from tensorflow.keras import layers
 from fileHandling import *
+from learnBehaviour import *
 
 class Recommender():
     def resultsSorted(self,nn,databatch):
@@ -44,10 +45,14 @@ class Recommender():
 
     def __init__(self):
         try:
-            self.PreviousLearned = tf.keras.models.load_model('Popular')
+            self.PreviousLearned = tf.keras.models.load_model('user')
         except:
-            """ This would be learn model"""
-            print("not learned model good bye")
+            
+            print("Model not learned, Starting learing")
+            self.PreviousLearned = learnfromFile(genericfiles("steam","trainPopular.csv"))
+            
+            
+            
 
 
         self.features_dict = valuesfromFile(genericfiles("steam","trainPopular.csv"))
